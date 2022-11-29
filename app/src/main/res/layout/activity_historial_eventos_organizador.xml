@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".historial_eventos_organizador">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="360dp"
+        android:layout_height="595dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="72dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
