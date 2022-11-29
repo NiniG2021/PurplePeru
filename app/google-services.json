@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "818565713210",
+    "project_id": "purple-peru",
+    "storage_bucket": "purple-peru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818565713210:android:51b43f2dd30e0dbe361403",
+        "android_client_info": {
+          "package_name": "edu.pe.pucp.purpleperu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818565713210-gqapm6iode1llnce2r68r7bhjt4f364r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5odZijB8s-5upgnEmOJmehnXplmNwSuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818565713210-gqapm6iode1llnce2r68r7bhjt4f364r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
