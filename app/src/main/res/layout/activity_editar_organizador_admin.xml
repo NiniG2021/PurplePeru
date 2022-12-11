@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editar_organizador_admin">
+    tools:context=".Administrador.editar_organizador_admin">
 
     <TextView
         android:id="@+id/textView3"
@@ -15,14 +15,14 @@
         android:layout_marginEnd="121dp"
         android:text="Editar organizador"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre_organizado_admin"
+        app:layout_constraintBottom_toTopOf="@+id/editarNombreEvento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nombre_organizado_admin"
+        android:id="@+id/editarNombreEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -40,8 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre del organizador"
-        app:layout_constraintBottom_toBottomOf="@+id/nombre_organizado_admin"
-        app:layout_constraintTop_toTopOf="@+id/nombre_organizado_admin"
+        app:layout_constraintBottom_toBottomOf="@+id/editarNombreEvento"
+        app:layout_constraintTop_toTopOf="@+id/editarNombreEvento"
         tools:layout_editor_absoluteX="16dp" />
 
     <EditText
@@ -98,13 +98,13 @@
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="36dp"
         android:text="Editar"
-        app:layout_constraintBottom_toTopOf="@+id/btn_no_agregar_evento"
+        app:layout_constraintBottom_toTopOf="@+id/cancelarEditarBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_no_agregar_evento"
+        android:id="@+id/cancelarEditarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancelar"

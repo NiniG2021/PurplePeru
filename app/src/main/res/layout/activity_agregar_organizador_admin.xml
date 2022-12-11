@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".agregar_organizador_admin">
+    tools:context=".Administrador.agregar_organizador_admin">
 
     <TextView
         android:id="@+id/textView3"
@@ -15,14 +15,14 @@
         android:layout_marginEnd="121dp"
         android:text="Nuevo organizador"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre_organizado_admin"
+        app:layout_constraintBottom_toTopOf="@+id/editarNombreEvento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nombre_organizado_admin"
+        android:id="@+id/editarNombreEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -40,8 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre del organizador"
-        app:layout_constraintBottom_toBottomOf="@+id/nombre_organizado_admin"
-        app:layout_constraintTop_toTopOf="@+id/nombre_organizado_admin"
+        app:layout_constraintBottom_toBottomOf="@+id/editarNombreEvento"
+        app:layout_constraintTop_toTopOf="@+id/editarNombreEvento"
         tools:layout_editor_absoluteX="16dp" />
 
     <EditText
@@ -98,13 +98,13 @@
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="36dp"
         android:text="Agregar"
-        app:layout_constraintBottom_toTopOf="@+id/btn_no_agregar_evento"
+        app:layout_constraintBottom_toTopOf="@+id/cancelarEditarBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_no_agregar_evento"
+        android:id="@+id/cancelarEditarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancelar"
@@ -122,4 +122,18 @@
         app:layout_constraintBottom_toBottomOf="@+id/numero_organizador_admin"
         app:layout_constraintTop_toTopOf="@+id/numero_organizador_admin"
         tools:layout_editor_absoluteX="16dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationAdmmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="670dp"
+        android:background="@color/azul"
+        app:itemIconTint="@color/amarillo"
+        app:labelVisibilityMode="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_admin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

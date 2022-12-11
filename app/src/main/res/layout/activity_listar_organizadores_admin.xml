@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listar_organizadores_admin">
+    tools:context=".Administrador.listar_organizadores_admin">
 
     <TextView
         android:id="@+id/textView"
@@ -16,13 +16,13 @@
         android:layout_marginBottom="16dp"
         android:text="Lista de Organizadores"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintBottom_toTopOf="@+id/searchView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/searchView1"
         android:layout_width="343dp"
         android:layout_height="35dp"
         android:layout_marginStart="34dp"

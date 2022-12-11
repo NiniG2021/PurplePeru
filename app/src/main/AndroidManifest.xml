@@ -14,28 +14,69 @@
         android:theme="@style/Theme.PurplePeru"
         tools:targetApi="31">
         <activity
-            android:name=".historial_eventos_organizador"
+            android:name=".AgregarSolicitudCliene"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".listar_invitados_organizador"
+            android:name=".detallesEventoCliente"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".editar_evento_organizador"
+            android:name=".Cliente.historialEventosCliente"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".crear_evento_organizador"
+            android:name=".ForgetPassword"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SignIn"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Cliente.listarEventosCliente"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Organizador.listar_invitados_organizador"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Organizador.editar_evento_organizador"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Organizador.crear_evento_organizador"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -49,35 +90,35 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".editar_organizador_evento"
+            android:name=".Organizador.perfilOrganizador"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".listado_eventos_organizador"
+            android:name=".Organizador.listado_eventos_organizador"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".editar_organizador_admin"
+            android:name=".Administrador.editar_organizador_admin"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".agregar_organizador_admin"
+            android:name=".Administrador.agregar_organizador_admin"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".listar_organizadores_admin"
+            android:name=".Administrador.listar_organizadores_admin"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -85,13 +126,11 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

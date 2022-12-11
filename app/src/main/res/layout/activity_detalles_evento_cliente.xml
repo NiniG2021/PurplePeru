@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cliente.detallesEventoCliente">
+
+
+    <TextView
+        android:id="@+id/nombre_editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Titulo editable"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView444"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_editable"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Descripcion:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/text_descrip_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_descrip_edit" />
+
+    <TextView
+        android:id="@+id/tv_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Participantes:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/participante_edit"
+        app:layout_constraintStart_toStartOf="@+id/tv_curso"
+        app:layout_constraintTop_toTopOf="@+id/participante_edit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Fecha:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fecha_edit"
+        app:layout_constraintStart_toStartOf="@+id/tv_estado"
+        app:layout_constraintTop_toTopOf="@+id/fecha_edit" />
+
+    <TextView
+        android:id="@+id/tv_motivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Hora:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hora_edit"
+        app:layout_constraintStart_toStartOf="@+id/tv_marca"
+        app:layout_constraintTop_toTopOf="@+id/hora_edit" />
+
+    <TextView
+        android:id="@+id/text_descrip_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="112dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView444" />
+
+    <TextView
+        android:id="@+id/participante_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_descrip_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_estado"
+        app:layout_constraintTop_toBottomOf="@+id/text_descrip_edit" />
+
+    <TextView
+        android:id="@+id/fecha_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/participante_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_marca"
+        app:layout_constraintTop_toBottomOf="@+id/participante_edit" />
+
+    <TextView
+        android:id="@+id/hora_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/fecha_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_motivo"
+        app:layout_constraintTop_toBottomOf="@+id/fecha_edit" />
+
+    <TextView
+        android:id="@+id/lugar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/hora_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_marca"
+        app:layout_constraintTop_toBottomOf="@+id/hora_edit" />
+
+    <TextView
+        android:id="@+id/lugar_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Lugar:"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_motivo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_motivo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_motivo" />
+
+    <TextView
+        android:id="@+id/costo_detalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/lugar_text"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/costo_detalle_editable"
+        app:layout_constraintTop_toBottomOf="@+id/lugar_text" />
+
+    <TextView
+        android:id="@+id/costo_detalle_editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Costo:"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/lugar_text_2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/lugar_text_2"
+        app:layout_constraintTop_toBottomOf="@+id/lugar_text_2" />
+
+    <Button
+        android:id="@+id/btn_solicitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/negro"
+        android:onClick="solicitarEquipo"
+        android:text="Solicitar"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costo_detalle" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D9D9D9"
+        android:onClick="cancelar"
+        android:text="Cancelar"
+        android:textAllCaps="false"
+        android:textColor="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_solicitar" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azul"
+        android:layout_marginTop="670dp"
+        app:itemIconTint="@color/amarillo"
+        app:labelVisibilityMode="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_cliente" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

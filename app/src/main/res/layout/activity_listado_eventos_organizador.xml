@@ -4,82 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listado_eventos_organizador">
+    tools:context=".Organizador.listado_eventos_organizador">
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista de Participantes"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="55dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre del evento"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="122dp" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tipo"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="190dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Incritos"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="254dp" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buscar en la lista de invitados"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="317dp" />
-
-    <SearchView
-        android:layout_width="331dp"
-        android:layout_height="34dp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="367dp" />
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Lista de Dipositivos"
+        android:textColor="@color/negro"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="332dp"
-        android:layout_height="254dp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="419dp" />
+        android:id="@+id/recyclerEventoListado"
+        android:layout_width="366dp"
+        android:layout_height="477dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView1" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="123dp" />
+    <SearchView
+        android:id="@+id/searchView1"
+        android:layout_width="261dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/borde_redondo_search"
+        app:layout_constraintEnd_toStartOf="@+id/agregar_evento_btn_organizador"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationUsuario"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="196dp" />
+        android:background="@color/azul"
+        android:layout_marginTop="670dp"
+        app:itemIconTint="@color/amarillo"
+        app:labelVisibilityMode="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_organizador" />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="256dp" />
+    <Button
+        android:id="@+id/agregar_evento_btn_organizador"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/boton_redondo"
+        android:drawableTop="@drawable/add_item2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

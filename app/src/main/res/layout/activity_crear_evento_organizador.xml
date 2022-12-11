@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".crear_evento_organizador">
+    tools:context=".Organizador.crear_evento_organizador">
 
     <TextView
         android:id="@+id/textView3"
@@ -13,8 +13,10 @@
         android:layout_marginStart="144dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="145dp"
+        android:layout_marginBottom="24dp"
         android:text="Nuevo evento"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewEditar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,208 +28,272 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
         android:layout_marginEnd="32dp"
+        android:onClick="guardarEquipo"
         android:text="Agregar"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_no_agregar_evento"
-        app:layout_constraintEnd_toStartOf="@+id/btn_no_agregar_evento"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelarEditarBtn"
+        app:layout_constraintEnd_toStartOf="@+id/cancelarEditarBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_no_agregar_evento" />
+        app:layout_constraintTop_toTopOf="@+id/cancelarEditarBtn" />
 
     <Button
-        android:id="@+id/btn_no_agregar_evento"
+        android:id="@+id/cancelarEditarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="54dp"
+        android:layout_marginBottom="75dp"
+        android:onClick="cancelar"
         android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintStart_toEndOf="@+id/btn_agregar_evento"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadInivitadosOrganizador"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="Hora"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTime"
-        app:layout_constraintTop_toTopOf="@+id/editTextTime"
-        tools:layout_editor_absoluteX="41dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/horaEditarOrganizador"
+        app:layout_constraintStart_toEndOf="@+id/editarDateOrganizador"
+        app:layout_constraintTop_toTopOf="@+id/horaEditarOrganizador"
+        app:layout_constraintVertical_bias="0.523" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:id="@+id/cantidadInivitadosOrganizador"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btn_no_agregar_evento"
+        app:layout_constraintBottom_toBottomOf="@+id/costoEditarOrganizador"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView17" />
+        app:layout_constraintTop_toTopOf="@+id/costoEditarOrganizador" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre del evento"
-        app:layout_constraintBottom_toBottomOf="@+id/nombre_organizado_admin"
-        app:layout_constraintTop_toTopOf="@+id/nombre_organizado_admin"
+        app:layout_constraintBottom_toBottomOf="@+id/editarNombreEvento"
+        app:layout_constraintTop_toTopOf="@+id/editarNombreEvento"
         app:layout_constraintVertical_bias="0.23"
         tools:layout_editor_absoluteX="17dp" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerEditarOrganizador"
         android:layout_width="206dp"
         android:layout_height="18dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/otroEditarText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/editarNombreEvento" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="Fecha"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
-        app:layout_constraintTop_toTopOf="@+id/editTextDate"
-        app:layout_constraintVertical_bias="0.538"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/editarDateOrganizador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editarDateOrganizador"
+        app:layout_constraintVertical_bias="0.444" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
         android:text="Lugar"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="397dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/lugarEditarOrganizador"
+        app:layout_constraintEnd_toStartOf="@+id/lugarEditarOrganizador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lugarEditarOrganizador" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/descripEditarOrganizador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintBottom_toTopOf="@+id/horaEditarOrganizador"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toEndOf="@+id/textView11" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/otroEditarText" />
 
     <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/horaEditarOrganizador"
+        android:layout_width="113dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="time"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toEndOf="@+id/textView14" />
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/descripEditarOrganizador" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Invitados"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber2"
-        app:layout_constraintTop_toTopOf="@+id/editTextNumber2"
-        tools:layout_editor_absoluteX="55dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/cantidadInivitadosOrganizador"
+        app:layout_constraintTop_toTopOf="@+id/cantidadInivitadosOrganizador"
+        app:layout_constraintVertical_bias="0.571"
+        tools:layout_editor_absoluteX="209dp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Descripcion del evento"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.846"
+        app:layout_constraintBottom_toBottomOf="@+id/descripEditarOrganizador"
+        app:layout_constraintTop_toTopOf="@+id/descripEditarOrganizador"
+        app:layout_constraintVertical_bias="0.307"
         tools:layout_editor_absoluteX="17dp" />
 
     <EditText
-        android:id="@+id/nombre_organizado_admin"
+        android:id="@+id/editarNombreEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerEditarOrganizador"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.888" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tipo de evento"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerEditarOrganizador"
+        app:layout_constraintTop_toTopOf="@+id/spinnerEditarOrganizador"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="21dp" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
+        android:id="@+id/editarDateOrganizador"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
         android:ems="10"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toEndOf="@+id/textView12" />
+        app:layout_constraintBottom_toBottomOf="@+id/horaEditarOrganizador"
+        app:layout_constraintTop_toTopOf="@+id/horaEditarOrganizador"
+        tools:layout_editor_absoluteX="92dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/costoEditarOrganizador"
+        android:layout_width="94dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/lugarEditarOrganizador"
+        tools:layout_editor_absoluteX="96dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="Costo"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
-        app:layout_constraintTop_toTopOf="@+id/editTextNumber"
-        app:layout_constraintVertical_bias="0.807"
-        tools:layout_editor_absoluteX="55dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/costoEditarOrganizador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/costoEditarOrganizador"
+        app:layout_constraintVertical_bias="0.923" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
+        android:id="@+id/lugarEditarOrganizador"
+        android:layout_width="289dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintBottom_toTopOf="@+id/costoEditarOrganizador"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toEndOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/horaEditarOrganizador" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En caso, se seleccione otro"
+        app:layout_constraintBottom_toBottomOf="@+id/otroEditarText"
+        app:layout_constraintTop_toTopOf="@+id/otroEditarText"
+        tools:layout_editor_absoluteX="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/otroEditarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/descripEditarOrganizador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEditarOrganizador" />
+
+    <ImageButton
+        android:id="@+id/imageViewEditar"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/ediatrBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/ediatrBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="32dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/editarNombreEvento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewEditar"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
-package edu.pe.pucp.purpleperu;
+package edu.pe.pucp.purpleperu.Administrador;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import edu.pe.pucp.purpleperu.R;
 
 public class editar_organizador_admin extends AppCompatActivity {
 
